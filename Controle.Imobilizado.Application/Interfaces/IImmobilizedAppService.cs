@@ -12,7 +12,7 @@ namespace Controle.Imobilizado.Application.Interfaces
 
         void Delete(ObjectId id);
 
-        IEnumerable<ImmobilizedViewModel> GetAll(int? skip = 0, int? limit = 50);
+        IEnumerable<ImmobilizedViewModel> GetAll(int skip = 0, int limit = 50);
 
         ImmobilizedViewModel GetById(ObjectId id);
     }

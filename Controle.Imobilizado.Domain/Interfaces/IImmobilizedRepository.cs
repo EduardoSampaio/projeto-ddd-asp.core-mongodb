@@ -12,7 +12,7 @@ namespace Controle.Imobilizado.Domain.Interfaces
 
         void Delete(ObjectId id);
 
-        IEnumerable<Immobilized> GetAll(int? skip = 0, int? limit = 50);
+        IEnumerable<Immobilized> GetAll(int skip = 0, int limit = 50);
 
         Immobilized GetById(ObjectId id);
 

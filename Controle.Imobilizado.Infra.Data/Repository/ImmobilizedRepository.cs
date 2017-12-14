@@ -28,7 +28,7 @@ namespace Controle.Imobilizado.Infra.Data.Repository
             _mongoContext.Immobilized.ReplaceOne(x => x.Id.Equals(entity.Id), entity);
         }
 
-        public IEnumerable<Immobilized> GetAll(int? skip = 0, int? limit = 50)
+        public IEnumerable<Immobilized> GetAll(int skip = 0, int limit = 50)
         {
             return _mongoContext.Immobilized.Find(x => true).Skip(skip).Limit(limit).ToList();
         }

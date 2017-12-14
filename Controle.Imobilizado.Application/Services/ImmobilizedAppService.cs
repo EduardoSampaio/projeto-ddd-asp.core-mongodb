@@ -12,7 +12,7 @@ namespace Controle.Imobilizado.Application.Services
     /// <summary>
     /// AppService Immobilized
     /// </summary>
-    public class ImmobilizedAppService : Interfaces.IImmobilizedAppService
+    public class ImmobilizedAppService : IImmobilizedAppService
     {
         private readonly IImmobilizedRepository _repository;
 
@@ -29,7 +29,7 @@ namespace Controle.Imobilizado.Application.Services
             _repository.Delete(id);
         }
 
-        public IEnumerable<ImmobilizedViewModel> GetAll(int? skip = 0, int? limit = 50)
+        public IEnumerable<ImmobilizedViewModel> GetAll(int skip = 0, int limit = 50)
         {
             return _repository.GetAll(skip, limit)
                 .Select(entity => new ImmobilizedViewModel

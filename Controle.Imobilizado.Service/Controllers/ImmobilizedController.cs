@@ -25,7 +25,7 @@ namespace Controle.Imobilizado.Service.Controllers
 
         // GET: api/Immobilized
         [HttpGet]
-        public IEnumerable<ImmobilizedViewModel> Get(int? skip = 0, int? limit = 50)
+        public IEnumerable<ImmobilizedViewModel> Get(int skip = 0, int limit = 50)
         {
             return _appService.GetAll(skip, limit);
         }
