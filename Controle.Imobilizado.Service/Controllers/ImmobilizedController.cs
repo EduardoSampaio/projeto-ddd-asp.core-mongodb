@@ -17,12 +17,6 @@ namespace Controle.Imobilizado.Service.Controllers
             _appService = appService;
         }
 
-        [HttpGet("version")]
-        public string Version()
-        {
-            return "Api Running V1";
-        }
-
         // GET: api/Immobilized
         [HttpGet]
         public IEnumerable<ImmobilizedViewModel> Get(int skip = 0, int limit = 50)
